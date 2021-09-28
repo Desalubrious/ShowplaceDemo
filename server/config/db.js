@@ -15,12 +15,21 @@ const db = mysql.createConnection({
     database: process.env.DB_NAME
 });
 
+// Creates the table in the database
+let createTable = "CREATE TABLE IF NOT EXISTS posts (id INT AUTO_INCREMENT PRIMARY KEY NOT NULL UNIQUE, title TEXT NOT NULL, post_text TEXT NOT NULL, user_name VARCHAR(45) NOT NULL, date_posted DATETIME NOT NULL)";
 
 db.connect((err) => {
     if (err) {
         throw err;
     }
     console.log('Connected to database');
+});
+
+db.query(createTable, (err, result) => {
+    if (err) {
+        throw err;
+    }
+    console.log('Table created');
 });
 
 module.exports = db;
