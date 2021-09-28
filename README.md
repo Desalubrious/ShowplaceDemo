@@ -14,6 +14,7 @@ If you have any problems getting the app running- reach out to me and I can help
 
 
 ## Usage
+To start the app- You must run npm start in both the server AND Showplace App folders.
 
 When in the app, a user is able to view blog posts while not signed in. 
 
@@ -41,6 +42,8 @@ MySQL
 Express
 Javascript
 ```
+## Demonstration
+![DemoGif](https://github.com/Desalubrious/ShowplaceDemo/blob/main/Demo/demo.gif?raw=true)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
