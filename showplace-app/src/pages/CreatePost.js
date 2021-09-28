@@ -1,18 +1,25 @@
 import React, { useEffect } from "react";
+import { useState } from "react";
+
 import Axios from "axios";
 import "../App.css"
-import { useState } from "react";
-// import Login from "../components/Login";
+
+
 // Create Post Page
 export default function CreatePost() {
-  
+// Makes a user login if they are not logged in to create a post.
+
+
+
+
 
 const [userName, setUserName] = React.useState("");
 const [title, setTitle] = React.useState("");
 const [text, setText] = React.useState("");
 
   const submitPost = () => {
-    Axios.post("http://localhost:3001/api/create", {userName : userName, title : title, text : text})
+    Axios.post("http://localhost:3001/api/create", {userName : userName, title : title, text : text});
+    window.location.pathname = "/";
   }
 
   return (
@@ -28,4 +35,5 @@ const [text, setText] = React.useState("");
       </div>
     </div>
   );
+
 }
